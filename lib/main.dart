@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:miabe_quiz/core/routing/router.dart";
 import "package:miabe_quiz/core/theme/app_theme.dart";
 
 void main() {
@@ -10,15 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const Scaffold(
-        body: Center(
-          child: Text("Hello World!"),
-        ),
-      ),
+      themeMode: .light,
+      routerConfig: appRouter,
     );
   }
 }
