@@ -1,0 +1,962 @@
+[
+  {
+    "id": "q-math-001",
+    "subjectId": "math",
+    "difficulty": "easy",
+    "text": "Combien font 12 x 8 ?",
+    "options": [
+      "86",
+      "96",
+      "106",
+      "76"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "12 x 8 = 96.",
+    "points": 1
+  },
+  {
+    "id": "q-math-002",
+    "subjectId": "math",
+    "difficulty": "easy",
+    "text": "Quel est le résultat de 15 - 7 ?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "6"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "15 - 7 = 8.",
+    "points": 1
+  },
+  {
+    "id": "q-math-003",
+    "subjectId": "math",
+    "difficulty": "easy",
+    "text": "Quelle est la formule de l'aire d'un carré de côté c ?",
+    "options": [
+      "2c",
+      "c x c",
+      "4c",
+      "c + c"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "L'aire d'un carré est côté x côté.",
+    "points": 1
+  },
+  {
+    "id": "q-math-004",
+    "subjectId": "math",
+    "difficulty": "medium",
+    "text": "Quelle est la somme des angles d'un triangle ?",
+    "options": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La somme des angles d'un triangle vaut toujours 180°.",
+    "points": 1
+  },
+  {
+    "id": "q-math-005",
+    "subjectId": "math",
+    "difficulty": "medium",
+    "text": "Quelle est la valeur de x dans 2x + 4 = 12 ?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "2x = 8, donc x = 4.",
+    "points": 1
+  },
+  {
+    "id": "q-math-006",
+    "subjectId": "math",
+    "difficulty": "medium",
+    "text": "Quel est le PGCD de 24 et 36 ?",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "18"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "Le plus grand commun diviseur de 24 et 36 est 12.",
+    "points": 1
+  },
+  {
+    "id": "q-math-007",
+    "subjectId": "math",
+    "difficulty": "hard",
+    "text": "Quelle est la dérivée de f(x) = x² ?",
+    "options": [
+      "x",
+      "2x",
+      "x²",
+      "2"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La dérivée de x² est 2x.",
+    "points": 1
+  },
+  {
+    "id": "q-math-008",
+    "subjectId": "math",
+    "difficulty": "hard",
+    "text": "Quelle est la solution de x² - 5x + 6 = 0 ?",
+    "options": [
+      "x=1 ou x=6",
+      "x=2 ou x=3",
+      "x=-2 ou x=-3",
+      "x=0 ou x=5"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le trinôme se factorise en (x-2)(x-3).",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-001",
+    "subjectId": "chimie",
+    "difficulty": "easy",
+    "text": "Quel est le symbole chimique de l'oxygène ?",
+    "options": [
+      "Ox",
+      "O",
+      "Og",
+      "O2"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le symbole de l'oxygène est O.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-002",
+    "subjectId": "chimie",
+    "difficulty": "easy",
+    "text": "Combien de protons possède un atome d'hydrogène ?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "L'hydrogène a un seul proton (numéro atomique 1).",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-003",
+    "subjectId": "chimie",
+    "difficulty": "easy",
+    "text": "Quel est l'état de l'eau à 25°C et pression normale ?",
+    "options": [
+      "Solide",
+      "Liquide",
+      "Gazeux",
+      "Plasma"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "À 25°C, l'eau est liquide.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-004",
+    "subjectId": "chimie",
+    "difficulty": "medium",
+    "text": "Quelle est la formule chimique du sel de table ?",
+    "options": [
+      "NaCl",
+      "KCl",
+      "CaCl2",
+      "NaOH"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "Le sel de table est le chlorure de sodium, NaCl.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-005",
+    "subjectId": "chimie",
+    "difficulty": "medium",
+    "text": "Quel est le pH d'une solution neutre ?",
+    "options": [
+      "0",
+      "7",
+      "10",
+      "14"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le pH neutre est 7.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-006",
+    "subjectId": "chimie",
+    "difficulty": "medium",
+    "text": "Quel gaz est produit lors de la combustion du carbone ?",
+    "options": [
+      "Oxygène",
+      "Azote",
+      "Dioxyde de carbone",
+      "Hydrogène"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "La combustion du carbone produit du CO2.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-007",
+    "subjectId": "chimie",
+    "difficulty": "hard",
+    "text": "Combien d'électrons de valence possède le carbone ?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le carbone a 4 électrons de valence.",
+    "points": 1
+  },
+  {
+    "id": "q-chimie-008",
+    "subjectId": "chimie",
+    "difficulty": "hard",
+    "text": "Quelle est la masse molaire approximative de l'eau (H2O) ?",
+    "options": [
+      "16 g/mol",
+      "18 g/mol",
+      "20 g/mol",
+      "22 g/mol"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "H2O = 2(1) + 16 = 18 g/mol.",
+    "points": 1
+  },
+  {
+    "id": "q-physique-001",
+    "subjectId": "physique",
+    "difficulty": "easy",
+    "text": "Quelle est l'unité de mesure de la force ?",
+    "options": [
+      "Watt",
+      "Newton",
+      "Joule",
+      "Pascal"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La force se mesure en Newton (N).",
+    "points": 1
+  },
+  {
+    "id": "q-physique-002",
+    "subjectId": "physique",
+    "difficulty": "easy",
+    "text": "Quelle est la vitesse de la lumière dans le vide (approx) ?",
+    "options": [
+      "300 000 km/s",
+      "150 000 km/s",
+      "3 000 km/s",
+      "30 000 km/s"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "La lumière se déplace à environ 300 000 km/s.",
+    "points": 1
+  },
+  {
+    "id": "q-physique-003",
+    "subjectId": "physique",
+    "difficulty": "easy",
+    "text": "Quelle grandeur mesure-t-on en degrés Celsius ?",
+    "options": [
+      "La pression",
+      "La température",
+      "La masse",
+      "Le volume"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le Celsius mesure la température.",
+    "points": 1
+  },
+  {
+    "id": "q-physique-004",
+    "subjectId": "physique",
+    "difficulty": "medium",
+    "text": "Quelle est la formule de la vitesse ?",
+    "options": [
+      "v = d x t",
+      "v = d / t",
+      "v = t / d",
+      "v = d + t"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La vitesse est la distance divisée par le temps.",
+    "points": 1
+  },
+  {
+    "id": "q-physique-005",
+    "subjectId": "physique",
+    "difficulty": "medium",
+    "text": "Quelle loi relie force, masse et accélération ?",
+    "options": [
+      "Loi de Newton (F=ma)",
+      "Loi d'Ohm",
+      "Loi de Boyle",
+      "Loi de Hooke"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "La deuxième loi de Newton énonce F = m x a.",
+    "points": 1
+  },
+  {
+    "id": "q-physique-006",
+    "subjectId": "physique",
+    "difficulty": "medium",
+    "text": "Quelle est l'unité de l'énergie ?",
+    "options": [
+      "Newton",
+      "Watt",
+      "Joule",
+      "Ampère"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "L'énergie se mesure en Joule (J).",
+    "points": 1
+  },
+  {
+    "id": "q-physique-007",
+    "subjectId": "physique",
+    "difficulty": "hard",
+    "text": "Quelle est la formule de l'énergie cinétique ?",
+    "options": [
+      "E = mc²",
+      "E = 1/2 m v²",
+      "E = mgh",
+      "E = m/v"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "L'énergie cinétique vaut 1/2 x masse x vitesse².",
+    "points": 1
+  },
+  {
+    "id": "q-physique-008",
+    "subjectId": "physique",
+    "difficulty": "hard",
+    "text": "Que décrit le principe d'inertie ?",
+    "options": [
+      "Un corps accélère sans force",
+      "Un corps au repos reste au repos sans force",
+      "L'énergie se crée spontanément",
+      "La masse varie avec la vitesse"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le principe d'inertie dit qu'un corps garde son état de mouvement sans force extérieure.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-001",
+    "subjectId": "biologie",
+    "difficulty": "easy",
+    "text": "Quelle est l'unité de base du vivant ?",
+    "options": [
+      "L'organe",
+      "La cellule",
+      "Le tissu",
+      "L'organite"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La cellule est l'unité de base du vivant.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-002",
+    "subjectId": "biologie",
+    "difficulty": "easy",
+    "text": "Quel organite produit l'énergie dans la cellule ?",
+    "options": [
+      "Noyau",
+      "Mitochondrie",
+      "Ribosome",
+      "Golgi"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La mitochondrie est la centrale énergétique de la cellule.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-003",
+    "subjectId": "biologie",
+    "difficulty": "easy",
+    "text": "Quel est le rôle des globules rouges ?",
+    "options": [
+      "Combattre les infections",
+      "Transporter l'oxygène",
+      "Digérer les aliments",
+      "Produire des hormones"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Les globules rouges transportent l'oxygène via l'hémoglobine.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-004",
+    "subjectId": "biologie",
+    "difficulty": "medium",
+    "text": "Où se déroule la photosynthèse ?",
+    "options": [
+      "Mitochondrie",
+      "Chloroplaste",
+      "Noyau",
+      "Vacuole"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La photosynthèse a lieu dans les chloroplastes.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-005",
+    "subjectId": "biologie",
+    "difficulty": "medium",
+    "text": "Combien de chromosomes possède une cellule humaine normale ?",
+    "options": [
+      "23",
+      "46",
+      "44",
+      "48"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Une cellule humaine possède 46 chromosomes (23 paires).",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-006",
+    "subjectId": "biologie",
+    "difficulty": "medium",
+    "text": "Quel processus permet la division cellulaire ?",
+    "options": [
+      "La méiose uniquement",
+      "La mitose",
+      "La photosynthèse",
+      "La respiration"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La mitose permet la division des cellules somatiques.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-007",
+    "subjectId": "biologie",
+    "difficulty": "hard",
+    "text": "Quelle molécule porte l'information génétique ?",
+    "options": [
+      "ARN",
+      "ADN",
+      "Protéine",
+      "Lipide"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "L'ADN porte l'information génétique.",
+    "points": 1
+  },
+  {
+    "id": "q-biologie-008",
+    "subjectId": "biologie",
+    "difficulty": "hard",
+    "text": "Qu'est-ce qu'un allèle ?",
+    "options": [
+      "Un chromosome entier",
+      "Une variante d'un gène",
+      "Un type de cellule",
+      "Un organite"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Un allèle est une variante possible d'un gène.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-001",
+    "subjectId": "anglais",
+    "difficulty": "easy",
+    "text": "What is the past tense of 'go' ?",
+    "options": [
+      "Goed",
+      "Went",
+      "Gone",
+      "Going"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The past tense of 'go' is 'went'.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-002",
+    "subjectId": "anglais",
+    "difficulty": "easy",
+    "text": "Choose the correct article: '___ apple'",
+    "options": [
+      "A",
+      "An",
+      "The only",
+      "No article"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "We use 'an' before a vowel sound.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-003",
+    "subjectId": "anglais",
+    "difficulty": "easy",
+    "text": "What is the plural of 'child' ?",
+    "options": [
+      "Childs",
+      "Childes",
+      "Children",
+      "Child"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The irregular plural of 'child' is 'children'.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-004",
+    "subjectId": "anglais",
+    "difficulty": "medium",
+    "text": "Which sentence is correct ?",
+    "options": [
+      "She don't like tea",
+      "She doesn't like tea",
+      "She not like tea",
+      "She isn't likes tea"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "'Doesn't' is used with third person singular in the present simple.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-005",
+    "subjectId": "anglais",
+    "difficulty": "medium",
+    "text": "What is a synonym for 'happy' ?",
+    "options": [
+      "Sad",
+      "Joyful",
+      "Angry",
+      "Tired"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "'Joyful' means the same as 'happy'.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-006",
+    "subjectId": "anglais",
+    "difficulty": "medium",
+    "text": "Identify the adjective: 'The quick fox jumps.'",
+    "options": [
+      "Fox",
+      "Jumps",
+      "Quick",
+      "The"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "'Quick' describes the fox, making it an adjective.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-007",
+    "subjectId": "anglais",
+    "difficulty": "hard",
+    "text": "Which is the correct conditional: 'If I ___ rich, I would travel.'",
+    "options": [
+      "am",
+      "was",
+      "were",
+      "will be"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "In the second conditional, we use 'were' for all subjects.",
+    "points": 1
+  },
+  {
+    "id": "q-anglais-008",
+    "subjectId": "anglais",
+    "difficulty": "hard",
+    "text": "What does the idiom 'break the ice' mean ?",
+    "options": [
+      "Cause damage",
+      "Start a conversation",
+      "End a friendship",
+      "Feel cold"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "'Break the ice' means to initiate conversation in a social setting.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-001",
+    "subjectId": "histoire",
+    "difficulty": "easy",
+    "text": "En quelle année a eu lieu la Révolution française ?",
+    "options": [
+      "1769",
+      "1789",
+      "1799",
+      "1804"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La Révolution française a débuté en 1789.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-002",
+    "subjectId": "histoire",
+    "difficulty": "easy",
+    "text": "Qui a été le premier président des États-Unis ?",
+    "options": [
+      "Abraham Lincoln",
+      "George Washington",
+      "Thomas Jefferson",
+      "John Adams"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "George Washington fut le premier président des États-Unis.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-003",
+    "subjectId": "histoire",
+    "difficulty": "easy",
+    "text": "Quelle civilisation a construit les pyramides de Gizeh ?",
+    "options": [
+      "Les Romains",
+      "Les Égyptiens",
+      "Les Grecs",
+      "Les Mayas"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Les pyramides de Gizeh ont été construites par les Égyptiens.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-004",
+    "subjectId": "histoire",
+    "difficulty": "medium",
+    "text": "Quelle guerre a pris fin en 1918 ?",
+    "options": [
+      "La Seconde Guerre mondiale",
+      "La Première Guerre mondiale",
+      "La guerre de Sécession",
+      "La guerre froide"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "La Première Guerre mondiale s'est terminée en 1918.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-005",
+    "subjectId": "histoire",
+    "difficulty": "medium",
+    "text": "Qui était Napoléon Bonaparte ?",
+    "options": [
+      "Un roi anglais",
+      "Un empereur français",
+      "Un philosophe grec",
+      "Un pharaon"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Napoléon Bonaparte fut empereur des Français.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-006",
+    "subjectId": "histoire",
+    "difficulty": "medium",
+    "text": "Quel mur est tombé en 1989 ?",
+    "options": [
+      "Le mur de Chine",
+      "Le mur de Berlin",
+      "Le mur d'Hadrien",
+      "Le mur des lamentations"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le mur de Berlin est tombé en 1989.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-007",
+    "subjectId": "histoire",
+    "difficulty": "hard",
+    "text": "Quel traité a mis fin à la Première Guerre mondiale ?",
+    "options": [
+      "Traité de Versailles",
+      "Traité de Rome",
+      "Traité de Vienne",
+      "Traité de Paris"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "Le traité de Versailles fut signé en 1919.",
+    "points": 1
+  },
+  {
+    "id": "q-histoire-008",
+    "subjectId": "histoire",
+    "difficulty": "hard",
+    "text": "Quelle dynastie a régné sur l'Égypte ancienne le plus longtemps ?",
+    "options": [
+      "Ptolémaïque",
+      "XVIIIe dynastie",
+      "Il y a eu plusieurs dynasties sur des millénaires",
+      "Romaine"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "L'Égypte ancienne a connu de nombreuses dynasties sur environ 3000 ans.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-001",
+    "subjectId": "geographie",
+    "difficulty": "easy",
+    "text": "Quelle est la capitale du Togo ?",
+    "options": [
+      "Kara",
+      "Lomé",
+      "Sokodé",
+      "Atakpamé"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Lomé est la capitale du Togo.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-002",
+    "subjectId": "geographie",
+    "difficulty": "easy",
+    "text": "Quel est le plus grand océan du monde ?",
+    "options": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "L'océan Pacifique est le plus vaste.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-003",
+    "subjectId": "geographie",
+    "difficulty": "easy",
+    "text": "Quel continent abrite le Togo ?",
+    "options": [
+      "Asie",
+      "Afrique",
+      "Amérique du Sud",
+      "Océanie"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le Togo se trouve en Afrique de l'Ouest.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-004",
+    "subjectId": "geographie",
+    "difficulty": "medium",
+    "text": "Quel fleuve traverse l'Égypte ?",
+    "options": [
+      "Le Congo",
+      "Le Nil",
+      "Le Niger",
+      "Le Zambèze"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le Nil traverse l'Égypte.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-005",
+    "subjectId": "geographie",
+    "difficulty": "medium",
+    "text": "Quelle organisation régionale regroupe le Togo et 7 autres pays partageant le franc CFA ouest-africain ?",
+    "options": [
+      "CEDEAO",
+      "UEMOA",
+      "Union Africaine",
+      "SADC"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "L'UEMOA regroupe 8 pays d'Afrique de l'Ouest dont le Togo.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-006",
+    "subjectId": "geographie",
+    "difficulty": "medium",
+    "text": "Quelle est la plus haute montagne du monde ?",
+    "options": [
+      "Kilimandjaro",
+      "Mont Blanc",
+      "Everest",
+      "Mont Kenya"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "L'Everest culmine à 8849 mètres.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-007",
+    "subjectId": "geographie",
+    "difficulty": "hard",
+    "text": "Quel pays partage la plus longue frontière terrestre avec le Togo ?",
+    "options": [
+      "Bénin",
+      "Ghana",
+      "Burkina Faso",
+      "Côte d'Ivoire"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le Ghana partage la plus longue frontière terrestre avec le Togo.",
+    "points": 1
+  },
+  {
+    "id": "q-geographie-008",
+    "subjectId": "geographie",
+    "difficulty": "hard",
+    "text": "Quel désert est le plus grand désert chaud du monde ?",
+    "options": [
+      "Désert de Gobi",
+      "Sahara",
+      "Kalahari",
+      "Désert d'Atacama"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Le Sahara est le plus grand désert chaud du monde.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-001",
+    "subjectId": "technologie",
+    "difficulty": "easy",
+    "text": "Que signifie l'acronyme HTML ?",
+    "options": [
+      "HighText Markup Language",
+      "HyperText Markup Language",
+      "Hyperlink Text Markup Language",
+      "Home Tool Markup Language"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "HTML signifie HyperText Markup Language.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-002",
+    "subjectId": "technologie",
+    "difficulty": "easy",
+    "text": "Quel langage est principalement utilisé pour développer des apps Flutter ?",
+    "options": [
+      "Java",
+      "Kotlin",
+      "Dart",
+      "Swift"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "Flutter utilise le langage Dart.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-003",
+    "subjectId": "technologie",
+    "difficulty": "easy",
+    "text": "Que veut dire 'API' ?",
+    "options": [
+      "Application Programming Interface",
+      "Advanced Program Integration",
+      "Automated Process Index",
+      "Application Process Interaction"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "API signifie Application Programming Interface.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-004",
+    "subjectId": "technologie",
+    "difficulty": "medium",
+    "text": "Quel système de gestion de versions est le plus utilisé ?",
+    "options": [
+      "SVN",
+      "Git",
+      "Mercurial",
+      "CVS"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Git est le système de contrôle de version le plus répandu.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-005",
+    "subjectId": "technologie",
+    "difficulty": "medium",
+    "text": "Quel paradigme utilise principalement Flutter pour construire l'UI ?",
+    "options": [
+      "Impératif",
+      "Déclaratif",
+      "Procédural",
+      "Orienté flux"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Flutter utilise un paradigme déclaratif pour construire l'interface.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-006",
+    "subjectId": "technologie",
+    "difficulty": "medium",
+    "text": "Quel format de données est le plus utilisé pour les API REST ?",
+    "options": [
+      "XML",
+      "JSON",
+      "YAML",
+      "CSV"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "JSON est le format le plus courant pour les API REST modernes.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-007",
+    "subjectId": "technologie",
+    "difficulty": "hard",
+    "text": "Quel principe SOLID stipule qu'une classe ne devrait avoir qu'une seule responsabilité ?",
+    "options": [
+      "Open/Closed",
+      "Liskov Substitution",
+      "Single Responsibility",
+      "Interface Segregation"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "Le principe de responsabilité unique (SRP) l'énonce.",
+    "points": 1
+  },
+  {
+    "id": "q-technologie-008",
+    "subjectId": "technologie",
+    "difficulty": "hard",
+    "text": "Dans une architecture Clean/domain-first, où vivent les règles métier ?",
+    "options": [
+      "Dans la couche UI",
+      "Dans la couche domaine",
+      "Dans la base de données",
+      "Dans les DTO JSON"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Les règles métier vivent dans la couche domaine, indépendante des frameworks.",
+    "points": 1
+  }
+]

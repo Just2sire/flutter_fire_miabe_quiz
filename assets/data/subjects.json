@@ -1,0 +1,82 @@
+[
+  {
+    "id": "math",
+    "name": "Mathématiques",
+    "description": "Algèbre, géométrie et calcul",
+    "iconName": "calculator",
+    "colorHex": "8157F9",
+    "totalLessons": 4,
+    "totalQuizzes": 2,
+    "progress": 0.62
+  },
+  {
+    "id": "chimie",
+    "name": "Chimie",
+    "description": "Réactions, éléments et molécules",
+    "iconName": "flask",
+    "colorHex": "D55E55",
+    "totalLessons": 4,
+    "totalQuizzes": 2,
+    "progress": 0.89
+  },
+  {
+    "id": "physique",
+    "name": "Physique",
+    "description": "Mécanique, énergie et ondes",
+    "iconName": "atom",
+    "colorHex": "E9AC49",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.2
+  },
+  {
+    "id": "biologie",
+    "name": "Biologie",
+    "description": "Cellules, génétique et écosystèmes",
+    "iconName": "dna",
+    "colorHex": "46855A",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.45
+  },
+  {
+    "id": "anglais",
+    "name": "Anglais",
+    "description": "Grammar, vocabulary and comprehension",
+    "iconName": "language",
+    "colorHex": "8157F9",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.3
+  },
+  {
+    "id": "histoire",
+    "name": "Histoire",
+    "description": "Événements, dates et civilisations",
+    "iconName": "landmark",
+    "colorHex": "D55E55",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.55
+  },
+  {
+    "id": "geographie",
+    "name": "Géographie",
+    "description": "Pays, capitales et relief",
+    "iconName": "globe",
+    "colorHex": "E9AC49",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.15
+  },
+  {
+    "id": "technologie",
+    "name": "Technologie",
+    "description": "Programmation, réseaux et outils numériques",
+    "iconName": "cpu",
+    "colorHex": "46855A",
+    "totalLessons": 2,
+    "totalQuizzes": 1,
+    "progress": 0.7
+  }
+]

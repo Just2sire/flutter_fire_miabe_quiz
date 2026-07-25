@@ -11,7 +11,7 @@ extension NavigationExtensions on BuildContext {
   void goToWelcome() => go(AppRoutes.welcome);
 
   /// Navigation vers la page d'accueil
-  void goToHome() => go(AppRoutes.home);
+  void goToHome(String name) => go("${AppRoutes.home}?name=$name");
 
   // /// Navigation vers le profil
   // void goToProfile() => go(AppRoutes.profile);

@@ -110,6 +110,7 @@ class AppSpacing {
   static const EdgeInsets insetXl = EdgeInsets.all(xl);
   static const EdgeInsets insetXxl = EdgeInsets.all(xxl);
   static const EdgeInsets insetXxxl = EdgeInsets.all(xxxl);
+  static EdgeInsets insetX(double x) => EdgeInsets.all(x);
 
   // ─────────────────────────────────────────────
   // EDGE INSETS — horizontal
@@ -121,6 +122,7 @@ class AppSpacing {
   static const EdgeInsets insetHLg = EdgeInsets.symmetric(horizontal: lg);
   static const EdgeInsets insetHXl = EdgeInsets.symmetric(horizontal: xl);
   static const EdgeInsets insetHXxl = EdgeInsets.symmetric(horizontal: xxl);
+  static EdgeInsets insetHX(double x) => EdgeInsets.symmetric(horizontal: x);
 
   // ─────────────────────────────────────────────
   // EDGE INSETS — vertical
@@ -132,6 +134,7 @@ class AppSpacing {
   static const EdgeInsets insetVLg = EdgeInsets.symmetric(vertical: lg);
   static const EdgeInsets insetVXl = EdgeInsets.symmetric(vertical: xl);
   static const EdgeInsets insetVXxl = EdgeInsets.symmetric(vertical: xxl);
+  static EdgeInsets insetYX(double x) => EdgeInsets.symmetric(vertical: x);
 
   // ─────────────────────────────────────────────
   // EDGE INSETS — combinaisons communes
@@ -141,6 +144,11 @@ class AppSpacing {
   static const EdgeInsets screenPadding = EdgeInsets.symmetric(
     horizontal: sm,
     vertical: md,
+  );
+
+  static const EdgeInsets screenPaddingLg = EdgeInsets.symmetric(
+    horizontal: xl,
+    vertical: xl,
   );
   static const EdgeInsets screenPaddingH = EdgeInsets.symmetric(horizontal: lg);
   static const EdgeInsets screenPaddingV = EdgeInsets.symmetric(vertical: md);

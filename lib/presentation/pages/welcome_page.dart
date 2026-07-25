@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:miabe_quiz/core/extensions/build_context_extensions.dart";
+import "package:miabe_quiz/core/extensions/index.dart";
 import "package:miabe_quiz/core/theme/app_spacing.dart";
 import "package:miabe_quiz/presentation/widgets/app_elevated_button.dart";
 import "package:miabe_quiz/presentation/widgets/app_responsive_builder.dart";
@@ -63,7 +63,6 @@ class _WelcomePageState extends State<WelcomePage> {
                   pad = const EdgeInsets.symmetric(
                     horizontal: AppSpacing.yotta,
                   );
-                  // pad = AppSpacing.insetHXxl;
                   break;
                 case ScreenType.tablet:
                   pad = const EdgeInsets.symmetric(horizontal: AppSpacing.mega);
@@ -85,6 +84,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 hintStyle: textTheme.titleMedium?.copyWith(
                   color: colorScheme.onSurface.withValues(alpha: 0.5),
                 ),
+                onEditingComplete: submit,
                 border: border,
                 focusBorder: border,
               );
@@ -111,5 +111,6 @@ class _WelcomePageState extends State<WelcomePage> {
   void submit() {
     final name = _nameController.text;
     if (name.isEmpty) return;
+    context.goToHome(name);
   }
 }

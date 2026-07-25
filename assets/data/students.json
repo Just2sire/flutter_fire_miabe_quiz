@@ -1,0 +1,11 @@
+{
+  "id": "student-001",
+  "fullName": "Ahmed Mohamed",
+  "email": "ahmed.mohamed@example.com",
+  "phone": "+228 90 00 00 00",
+  "school": "Lycée Moderne de Lomé",
+  "gradeLevel": "10th Grade",
+  "avatarAsset": "assets/images/avatars/student_001.png",
+  "totalPoints": 1023,
+  "completedQuizzesCount": 45
+}

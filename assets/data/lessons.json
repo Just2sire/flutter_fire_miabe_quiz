@@ -1,0 +1,202 @@
+[
+  {
+    "id": "l-001",
+    "unitId": "u-math-01",
+    "subjectId": "math",
+    "title": "Propriétés des points et des droites",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/math_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-002",
+    "unitId": "u-math-01",
+    "subjectId": "math",
+    "title": "Angles et triangles",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/math_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-003",
+    "unitId": "u-math-02",
+    "subjectId": "math",
+    "title": "Équations du premier degré",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/math_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-004",
+    "unitId": "u-math-02",
+    "subjectId": "math",
+    "title": "Factorisation et binômes",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/math_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-005",
+    "unitId": "u-chimie-01",
+    "subjectId": "chimie",
+    "title": "Structure de l'atome",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/chimie_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-006",
+    "unitId": "u-chimie-01",
+    "subjectId": "chimie",
+    "title": "La classification périodique",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/chimie_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-007",
+    "unitId": "u-chimie-02",
+    "subjectId": "chimie",
+    "title": "Réactions acido-basiques",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/chimie_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-008",
+    "unitId": "u-chimie-02",
+    "subjectId": "chimie",
+    "title": "Combustion et oxydation",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/chimie_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-009",
+    "unitId": "u-physique-01",
+    "subjectId": "physique",
+    "title": "Les forces et le mouvement",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/physique_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-010",
+    "unitId": "u-physique-01",
+    "subjectId": "physique",
+    "title": "Travail, puissance et énergie",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/physique_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-011",
+    "unitId": "u-biologie-01",
+    "subjectId": "biologie",
+    "title": "La cellule et ses organites",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/biologie_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-012",
+    "unitId": "u-biologie-01",
+    "subjectId": "biologie",
+    "title": "Division cellulaire",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/biologie_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-013",
+    "unitId": "u-anglais-01",
+    "subjectId": "anglais",
+    "title": "Present simple vs present continuous",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/anglais_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-014",
+    "unitId": "u-anglais-01",
+    "subjectId": "anglais",
+    "title": "Common irregular verbs",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/anglais_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-015",
+    "unitId": "u-histoire-01",
+    "subjectId": "histoire",
+    "title": "Les grandes civilisations antiques",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/histoire_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-016",
+    "unitId": "u-histoire-01",
+    "subjectId": "histoire",
+    "title": "L'Europe médiévale",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/histoire_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-017",
+    "unitId": "u-geographie-01",
+    "subjectId": "geographie",
+    "title": "Le relief et les reliefs terrestres",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/geographie_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-018",
+    "unitId": "u-geographie-01",
+    "subjectId": "geographie",
+    "title": "Climats et zones climatiques",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/geographie_2.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-019",
+    "unitId": "u-technologie-01",
+    "subjectId": "technologie",
+    "title": "Introduction à Dart et Flutter",
+    "order": 1,
+    "durationMinutes": 16,
+    "thumbnailAsset": "assets/images/lessons/technologie_1.jpg",
+    "isCompleted": false
+  },
+  {
+    "id": "l-020",
+    "unitId": "u-technologie-01",
+    "subjectId": "technologie",
+    "title": "Architecture Clean et domain-first",
+    "order": 2,
+    "durationMinutes": 20,
+    "thumbnailAsset": "assets/images/lessons/technologie_2.jpg",
+    "isCompleted": false
+  }
+]

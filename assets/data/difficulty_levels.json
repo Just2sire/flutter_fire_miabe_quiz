@@ -1,0 +1,23 @@
+[
+  {
+    "id": "easy",
+    "name": "Facile",
+    "timePerQuestionSeconds": 60,
+    "pointsPerCorrect": 1,
+    "description": "Questions basiques, 60s par question"
+  },
+  {
+    "id": "medium",
+    "name": "Moyen",
+    "timePerQuestionSeconds": 45,
+    "pointsPerCorrect": 2,
+    "description": "Rythme modéré, 45s par question"
+  },
+  {
+    "id": "hard",
+    "name": "Difficile",
+    "timePerQuestionSeconds": 30,
+    "pointsPerCorrect": 3,
+    "description": "Défi ultime, 30s par question"
+  }
+]

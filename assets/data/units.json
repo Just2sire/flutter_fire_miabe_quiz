@@ -1,0 +1,62 @@
+[
+  {
+    "id": "u-math-01",
+    "subjectId": "math",
+    "name": "Unit 1 : Géométrie",
+    "order": 1
+  },
+  {
+    "id": "u-math-02",
+    "subjectId": "math",
+    "name": "Unit 2 : Algèbre",
+    "order": 2
+  },
+  {
+    "id": "u-chimie-01",
+    "subjectId": "chimie",
+    "name": "Unit 1 : Atomes et molécules",
+    "order": 1
+  },
+  {
+    "id": "u-chimie-02",
+    "subjectId": "chimie",
+    "name": "Unit 2 : Réactions chimiques",
+    "order": 2
+  },
+  {
+    "id": "u-physique-01",
+    "subjectId": "physique",
+    "name": "Unit 1 : Mécanique",
+    "order": 1
+  },
+  {
+    "id": "u-biologie-01",
+    "subjectId": "biologie",
+    "name": "Unit 1 : La cellule",
+    "order": 1
+  },
+  {
+    "id": "u-anglais-01",
+    "subjectId": "anglais",
+    "name": "Unit 1 : Grammar basics",
+    "order": 1
+  },
+  {
+    "id": "u-histoire-01",
+    "subjectId": "histoire",
+    "name": "Unit 1 : Antiquité et Moyen Âge",
+    "order": 1
+  },
+  {
+    "id": "u-geographie-01",
+    "subjectId": "geographie",
+    "name": "Unit 1 : Géographie physique",
+    "order": 1
+  },
+  {
+    "id": "u-technologie-01",
+    "subjectId": "technologie",
+    "name": "Unit 1 : Programmation et architecture",
+    "order": 1
+  }
+]
