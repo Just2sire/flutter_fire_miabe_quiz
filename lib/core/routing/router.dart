@@ -1,8 +1,6 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
 import "package:miabe_quiz/core/routing/app_routes.dart";
-import "package:miabe_quiz/presentation/pages/app_shell.dart";
-import "package:miabe_quiz/presentation/pages/home_page.dart";
 import "package:miabe_quiz/presentation/pages/index.dart";
 
 final appRouter = GoRouter(
@@ -35,7 +33,8 @@ final appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.subjects,
               builder: (context, state) =>
-                  const Scaffold(body: Center(child: Text("Sujets"))),
+                  const SubjectPage(),
+              // routes: const []
             ),
           ],
         ),

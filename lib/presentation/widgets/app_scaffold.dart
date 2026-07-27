@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter/services.dart" show SystemUiOverlayStyle;
+import "package:miabe_quiz/core/extensions/build_context_extensions.dart";
 import "package:miabe_quiz/core/theme/app_spacing.dart";
 
 class AppScaffold extends StatelessWidget {
@@ -72,7 +73,7 @@ class AppScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDarkMode =
-        MediaQuery.platformBrightnessOf(context) == Brightness.dark;
+        context.isDarkMode;
 
     // FIX 1 — Status bar contrast.
     // The icons must CONTRAST with the status bar background:
@@ -83,9 +84,9 @@ class AppScaffold extends StatelessWidget {
     final overlayStyle = SystemUiOverlayStyle(
       statusBarColor: statusBarColor ?? theme.scaffoldBackgroundColor,
       statusBarIconBrightness:
-      isDarkMode ? Brightness.dark : Brightness.light, // Android
+      isDarkMode ? Brightness.light : Brightness.dark, // Android
       statusBarBrightness:
-      isDarkMode ? Brightness.light : Brightness.dark, // iOS
+      isDarkMode ? .dark : Brightness.light, // iOS
     );
 
     final isScrollable = scrollable || onRefresh != null;

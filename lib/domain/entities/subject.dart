@@ -25,15 +25,15 @@ class Subject {
   final double progress;
 
   Subject copyWith({double? progress}) => Subject(
-        id: id,
-        name: name,
-        description: description,
-        iconName: iconName,
-        colorHex: colorHex,
-        totalLessons: totalLessons,
-        totalQuizzes: totalQuizzes,
-        progress: progress ?? this.progress,
-      );
+    id: id,
+    name: name,
+    description: description,
+    iconName: iconName,
+    colorHex: colorHex,
+    totalLessons: totalLessons,
+    totalQuizzes: totalQuizzes,
+    progress: progress ?? this.progress,
+  );
 
   @override
   bool operator ==(Object other) => other is Subject && other.id == id;

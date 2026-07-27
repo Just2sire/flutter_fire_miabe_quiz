@@ -1,3 +1,5 @@
+export "app_shell.dart";
 export "error_page.dart";
-// export "home_page.dart";
+export "home_page.dart";
+export "subject_page.dart";
 export "welcome_page.dart";
