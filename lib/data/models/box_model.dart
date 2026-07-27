@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import "package:flutter/foundation.dart";
 
 import "../../domain/entities/box.dart";
 import "../../domain/entities/enums.dart";
@@ -7,12 +7,6 @@ import "../../domain/entities/enums.dart";
 /// rester réaliste : le compte à rebours repart de cette durée à chaque
 /// lancement de l'app, comme "Box closes in: 28:45:50" dans la maquette.
 class BoxModel {
-  final String id;
-  final String title;
-  final List<String> questionIds;
-  final double closesInHours;
-  final String status;
-
   const BoxModel({
     required this.id,
     required this.title,
@@ -23,49 +17,54 @@ class BoxModel {
 
   factory BoxModel.fromMap(Map<String, dynamic> map) {
     return BoxModel(
-      id: map['id'] as String? ?? '',
-      title: map['title'] as String? ?? '',
-      questionIds: (map['questionIds'] as List?)?.cast<String>() ?? [],
-      closesInHours: (map['closesInHours'] as num?)?.toDouble() ?? 0.0,
-      status: map['status'] as String? ?? 'open',
+      id: map["id"] as String? ?? "",
+      title: map["title"] as String? ?? "",
+      questionIds: (map["questionIds"] as List?)?.cast<String>() ?? [],
+      closesInHours: (map["closesInHours"] as num?)?.toDouble() ?? 0.0,
+      status: map["status"] as String? ?? "open",
     );
   }
 
   factory BoxModel.fromJson(Map<String, dynamic> json) =>
       BoxModel.fromMap(json);
 
+  factory BoxModel.fromEntity(Box box) => BoxModel(
+    id: box.id,
+    title: box.title,
+    questionIds: box.questionIds,
+    closesInHours: box.closesAt.difference(DateTime.now()).inMinutes / 60.0,
+    status: box.status.name,
+  );
+  final String id;
+  final String title;
+  final List<String> questionIds;
+  final double closesInHours;
+  final String status;
+
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
-      'title': title,
-      'questionIds': questionIds,
-      'closesInHours': closesInHours,
-      'status': status,
+      "id": id,
+      "title": title,
+      "questionIds": questionIds,
+      "closesInHours": closesInHours,
+      "status": status,
     };
   }
 
   Map<String, dynamic> toJson() => toMap();
 
-  factory BoxModel.fromEntity(Box box) => BoxModel(
-        id: box.id,
-        title: box.title,
-        questionIds: box.questionIds,
-        closesInHours: box.closesAt.difference(DateTime.now()).inMinutes / 60.0,
-        status: box.status.name,
-      );
-
   Box toEntity() => Box(
-        id: id,
-        title: title,
-        questionIds: questionIds,
-        closesAt: DateTime.now().add(
-          Duration(minutes: (closesInHours * 60).round()),
-        ),
-        status: BoxStatus.values.firstWhere(
-          (s) => s.name == status,
-          orElse: () => BoxStatus.open,
-        ),
-      );
+    id: id,
+    title: title,
+    questionIds: questionIds,
+    closesAt: DateTime.now().add(
+      Duration(minutes: (closesInHours * 60).round()),
+    ),
+    status: BoxStatus.values.firstWhere(
+      (s) => s.name == status,
+      orElse: () => BoxStatus.open,
+    ),
+  );
 
   BoxModel copyWith({
     String? id,
@@ -85,7 +84,8 @@ class BoxModel {
 
   @override
   String toString() {
-    return 'BoxModel(id: $id, title: $title, questionIds: $questionIds, closesInHours: $closesInHours, status: $status)';
+    return "BoxModel(id: $id, title: $title, questionIds: $questionIds, "
+    "closesInHours: $closesInHours, status: $status)";
   }
 
   @override

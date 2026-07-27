@@ -1,15 +1,6 @@
 import "../../domain/entities/student.dart";
 
 class StudentModel {
-  final String id;
-  final String fullName;
-  final String email;
-  final String phone;
-  final String school;
-  final String gradeLevel;
-  final String avatarAsset;
-  final int totalPoints;
-  final int completedQuizzesCount;
 
   const StudentModel({
     required this.id,
@@ -41,6 +32,27 @@ class StudentModel {
   factory StudentModel.fromJson(Map<String, dynamic> json) =>
       StudentModel.fromMap(json);
 
+  factory StudentModel.fromEntity(Student s) => StudentModel(
+        id: s.id,
+        fullName: s.fullName,
+        email: s.email,
+        phone: s.phone,
+        school: s.school,
+        gradeLevel: s.gradeLevel,
+        avatarAsset: s.avatarAsset,
+        totalPoints: s.totalPoints,
+        completedQuizzesCount: s.completedQuizzesCount,
+      );
+  final String id;
+  final String fullName;
+  final String email;
+  final String phone;
+  final String school;
+  final String gradeLevel;
+  final String avatarAsset;
+  final int totalPoints;
+  final int completedQuizzesCount;
+
   Map<String, dynamic> toMap() {
     return {
       "id": id,
@@ -56,18 +68,6 @@ class StudentModel {
   }
 
   Map<String, dynamic> toJson() => toMap();
-
-  factory StudentModel.fromEntity(Student s) => StudentModel(
-        id: s.id,
-        fullName: s.fullName,
-        email: s.email,
-        phone: s.phone,
-        school: s.school,
-        gradeLevel: s.gradeLevel,
-        avatarAsset: s.avatarAsset,
-        totalPoints: s.totalPoints,
-        completedQuizzesCount: s.completedQuizzesCount,
-      );
 
   Student toEntity() => Student(
         id: id,
@@ -108,7 +108,10 @@ class StudentModel {
 
   @override
   String toString() {
-    return "StudentModel(id: $id, fullName: $fullName, email: $email, phone: $phone, school: $school, gradeLevel: $gradeLevel, avatarAsset: $avatarAsset, totalPoints: $totalPoints, completedQuizzesCount: $completedQuizzesCount)";
+    return "StudentModel(id: $id, fullName: $fullName, email: $email, "
+        "phone: $phone, school: $school, gradeLevel: $gradeLevel, "
+        "avatarAsset: $avatarAsset, totalPoints: $totalPoints, "
+        "completedQuizzesCount: $completedQuizzesCount)";
   }
 
   @override

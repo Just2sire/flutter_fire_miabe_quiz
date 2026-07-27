@@ -85,7 +85,7 @@ class _AppShellState extends State<AppShell> {
               items: _navItems,
               selectedIndex: widget.navigationShell.currentIndex,
               onTap: _onTap,
-              selectedColor: context.primaryColor,
+              selectedColor: context.accentColor,
             )
           : null,
     );

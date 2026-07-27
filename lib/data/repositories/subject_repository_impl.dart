@@ -10,10 +10,9 @@ import "../models/subject_model.dart";
 import "../models/unit_model.dart";
 
 class SubjectRepositoryImpl implements SubjectRepository {
-  final LocalJsonDataSource _dataSource;
-
   SubjectRepositoryImpl({LocalJsonDataSource? dataSource})
-      : _dataSource = dataSource ?? LocalJsonDataSource.instance;
+    : _dataSource = dataSource ?? LocalJsonDataSource.instance;
+  final LocalJsonDataSource _dataSource;
 
   static const _completedLessonsKey = "completed_lesson_ids";
 
@@ -50,9 +49,8 @@ class SubjectRepositoryImpl implements SubjectRepository {
     return json
         .map((e) => LessonModel.fromJson(e).toEntity())
         .map(
-          (l) => completedIds.contains(l.id)
-              ? l.copyWith(isCompleted: true)
-              : l,
+          (l) =>
+              completedIds.contains(l.id) ? l.copyWith(isCompleted: true) : l,
         )
         .where((l) => l.unitId == unitId)
         .toList()
@@ -66,9 +64,8 @@ class SubjectRepositoryImpl implements SubjectRepository {
     return json
         .map((e) => LessonModel.fromJson(e).toEntity())
         .map(
-          (l) => completedIds.contains(l.id)
-              ? l.copyWith(isCompleted: true)
-              : l,
+          (l) =>
+              completedIds.contains(l.id) ? l.copyWith(isCompleted: true) : l,
         )
         .where((l) => l.subjectId == subjectId)
         .toList()

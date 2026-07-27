@@ -1,17 +1,9 @@
-import 'package:flutter/foundation.dart';
+import "package:flutter/foundation.dart";
 
 import "../../domain/entities/enums.dart" show Difficulty;
 import "../../domain/entities/question.dart";
 
 class QuestionModel {
-  final String id;
-  final String subjectId;
-  final String difficulty;
-  final String text;
-  final List<String> options;
-  final int correctOptionIndex;
-  final String explanation;
-  final int points;
 
   const QuestionModel({
     required this.id,
@@ -26,34 +18,19 @@ class QuestionModel {
 
   factory QuestionModel.fromMap(Map<String, dynamic> map) {
     return QuestionModel(
-      id: map['id'] as String? ?? '',
-      subjectId: map['subjectId'] as String? ?? '',
-      difficulty: map['difficulty'] as String? ?? '',
-      text: map['text'] as String? ?? '',
-      options: (map['options'] as List?)?.cast<String>() ?? [],
-      correctOptionIndex: (map['correctOptionIndex'] as num?)?.toInt() ?? 0,
-      explanation: map['explanation'] as String? ?? '',
-      points: (map['points'] as num?)?.toInt() ?? 0,
+      id: map["id"] as String? ?? "",
+      subjectId: map["subjectId"] as String? ?? "",
+      difficulty: map["difficulty"] as String? ?? "",
+      text: map["text"] as String? ?? "",
+      options: (map["options"] as List?)?.cast<String>() ?? [],
+      correctOptionIndex: (map["correctOptionIndex"] as num?)?.toInt() ?? 0,
+      explanation: map["explanation"] as String? ?? "",
+      points: (map["points"] as num?)?.toInt() ?? 0,
     );
   }
 
   factory QuestionModel.fromJson(Map<String, dynamic> json) =>
       QuestionModel.fromMap(json);
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'subjectId': subjectId,
-      'difficulty': difficulty,
-      'text': text,
-      'options': options,
-      'correctOptionIndex': correctOptionIndex,
-      'explanation': explanation,
-      'points': points,
-    };
-  }
-
-  Map<String, dynamic> toJson() => toMap();
 
   factory QuestionModel.fromEntity(Question question) => QuestionModel(
         id: question.id,
@@ -65,6 +42,29 @@ class QuestionModel {
         explanation: question.explanation,
         points: question.points,
       );
+  final String id;
+  final String subjectId;
+  final String difficulty;
+  final String text;
+  final List<String> options;
+  final int correctOptionIndex;
+  final String explanation;
+  final int points;
+
+  Map<String, dynamic> toMap() {
+    return {
+      "id": id,
+      "subjectId": subjectId,
+      "difficulty": difficulty,
+      "text": text,
+      "options": options,
+      "correctOptionIndex": correctOptionIndex,
+      "explanation": explanation,
+      "points": points,
+    };
+  }
+
+  Map<String, dynamic> toJson() => toMap();
 
   Question toEntity() => Question(
         id: id,
@@ -104,7 +104,9 @@ class QuestionModel {
 
   @override
   String toString() {
-    return 'QuestionModel(id: $id, subjectId: $subjectId, difficulty: $difficulty, text: $text, options: $options, correctOptionIndex: $correctOptionIndex, explanation: $explanation, points: $points)';
+    return "QuestionModel(id: $id, subjectId: $subjectId, difficulty:"
+    " $difficulty, text: $text, options: $options, correctOptionIndex:"
+    " $correctOptionIndex, explanation: $explanation, points: $points)";
   }
 
   @override

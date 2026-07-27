@@ -1,15 +1,6 @@
 import "../../domain/entities/lesson.dart";
 
 class LessonModel {
-  final String id;
-  final String unitId;
-  final String subjectId;
-  final String title;
-  final int order;
-  final int durationMinutes;
-  final String thumbnailAsset;
-  final bool isCompleted;
-
   const LessonModel({
     required this.id,
     required this.unitId,
@@ -23,56 +14,64 @@ class LessonModel {
 
   factory LessonModel.fromMap(Map<String, dynamic> map) {
     return LessonModel(
-      id: map['id'] as String? ?? '',
-      unitId: map['unitId'] as String? ?? '',
-      subjectId: map['subjectId'] as String? ?? '',
-      title: map['title'] as String? ?? '',
-      order: (map['order'] as num?)?.toInt() ?? 0,
-      durationMinutes: (map['durationMinutes'] as num?)?.toInt() ?? 0,
-      thumbnailAsset: map['thumbnailAsset'] as String? ?? '',
-      isCompleted: map['isCompleted'] as bool? ?? false,
+      id: map["id"] as String? ?? "",
+      unitId: map["unitId"] as String? ?? "",
+      subjectId: map["subjectId"] as String? ?? "",
+      title: map["title"] as String? ?? "",
+      order: (map["order"] as num?)?.toInt() ?? 0,
+      durationMinutes: (map["durationMinutes"] as num?)?.toInt() ?? 0,
+      thumbnailAsset: map["thumbnailAsset"] as String? ?? "",
+      isCompleted: map["isCompleted"] as bool? ?? false,
     );
   }
 
   factory LessonModel.fromJson(Map<String, dynamic> json) =>
       LessonModel.fromMap(json);
 
+  factory LessonModel.fromEntity(Lesson lesson) => LessonModel(
+    id: lesson.id,
+    unitId: lesson.unitId,
+    subjectId: lesson.subjectId,
+    title: lesson.title,
+    order: lesson.order,
+    durationMinutes: lesson.durationMinutes,
+    thumbnailAsset: lesson.thumbnailAsset,
+    isCompleted: lesson.isCompleted,
+  );
+  final String id;
+  final String unitId;
+  final String subjectId;
+  final String title;
+  final int order;
+  final int durationMinutes;
+  final String thumbnailAsset;
+  final bool isCompleted;
+
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
-      'unitId': unitId,
-      'subjectId': subjectId,
-      'title': title,
-      'order': order,
-      'durationMinutes': durationMinutes,
-      'thumbnailAsset': thumbnailAsset,
-      'isCompleted': isCompleted,
+      "id": id,
+      "unitId": unitId,
+      "subjectId": subjectId,
+      "title": title,
+      "order": order,
+      "durationMinutes": durationMinutes,
+      "thumbnailAsset": thumbnailAsset,
+      "isCompleted": isCompleted,
     };
   }
 
   Map<String, dynamic> toJson() => toMap();
 
-  factory LessonModel.fromEntity(Lesson lesson) => LessonModel(
-        id: lesson.id,
-        unitId: lesson.unitId,
-        subjectId: lesson.subjectId,
-        title: lesson.title,
-        order: lesson.order,
-        durationMinutes: lesson.durationMinutes,
-        thumbnailAsset: lesson.thumbnailAsset,
-        isCompleted: lesson.isCompleted,
-      );
-
   Lesson toEntity() => Lesson(
-        id: id,
-        unitId: unitId,
-        subjectId: subjectId,
-        title: title,
-        order: order,
-        durationMinutes: durationMinutes,
-        thumbnailAsset: thumbnailAsset,
-        isCompleted: isCompleted,
-      );
+    id: id,
+    unitId: unitId,
+    subjectId: subjectId,
+    title: title,
+    order: order,
+    durationMinutes: durationMinutes,
+    thumbnailAsset: thumbnailAsset,
+    isCompleted: isCompleted,
+  );
 
   LessonModel copyWith({
     String? id,
@@ -98,7 +97,9 @@ class LessonModel {
 
   @override
   String toString() {
-    return 'LessonModel(id: $id, unitId: $unitId, subjectId: $subjectId, title: $title, order: $order, durationMinutes: $durationMinutes, thumbnailAsset: $thumbnailAsset, isCompleted: $isCompleted)';
+    return "LessonModel(id: $id, unitId: $unitId, subjectId: $subjectId, title:"
+        " $title, order: $order, durationMinutes: $durationMinutes, "
+        "thumbnailAsset: $thumbnailAsset, isCompleted: $isCompleted)";
   }
 
   @override

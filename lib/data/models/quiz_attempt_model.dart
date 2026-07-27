@@ -1,20 +1,9 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import "package:flutter/foundation.dart";
 
 import "../../domain/entities/enums.dart" show AttemptSourceType;
 import "../../domain/entities/quiz_attempt.dart";
 
 class QuizAttemptModel {
-  final String id;
-  final String studentId;
-  final String sourceId;
-  final String sourceType;
-  final String startedAt;
-  final String? completedAt;
-  final Map<String, int> answers;
-  final int correctCount;
-  final int wrongCount;
-  final int score;
 
   const QuizAttemptModel({
     required this.id,
@@ -22,47 +11,30 @@ class QuizAttemptModel {
     required this.sourceId,
     required this.sourceType,
     required this.startedAt,
-    this.completedAt,
     required this.answers,
     required this.correctCount,
     required this.wrongCount,
     required this.score,
+    this.completedAt,
   });
 
   factory QuizAttemptModel.fromMap(Map<String, dynamic> map) {
     return QuizAttemptModel(
-      id: map['id'] as String? ?? '',
-      studentId: map['studentId'] as String? ?? '',
-      sourceId: map['sourceId'] as String? ?? '',
-      sourceType: map['sourceType'] as String? ?? '',
-      startedAt: map['startedAt'] as String? ?? '',
-      completedAt: map['completedAt'] as String?,
-      answers: Map<String, int>.from(map['answers'] as Map? ?? {}),
-      correctCount: (map['correctCount'] as num?)?.toInt() ?? 0,
-      wrongCount: (map['wrongCount'] as num?)?.toInt() ?? 0,
-      score: (map['score'] as num?)?.toInt() ?? 0,
+      id: map["id"] as String? ?? "",
+      studentId: map["studentId"] as String? ?? "",
+      sourceId: map["sourceId"] as String? ?? "",
+      sourceType: map["sourceType"] as String? ?? "",
+      startedAt: map["startedAt"] as String? ?? "",
+      completedAt: map["completedAt"] as String?,
+      answers: Map<String, int>.from(map["answers"] as Map? ?? {}),
+      correctCount: (map["correctCount"] as num?)?.toInt() ?? 0,
+      wrongCount: (map["wrongCount"] as num?)?.toInt() ?? 0,
+      score: (map["score"] as num?)?.toInt() ?? 0,
     );
   }
 
   factory QuizAttemptModel.fromJson(Map<String, dynamic> json) =>
       QuizAttemptModel.fromMap(json);
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'studentId': studentId,
-      'sourceId': sourceId,
-      'sourceType': sourceType,
-      'startedAt': startedAt,
-      'completedAt': completedAt,
-      'answers': answers,
-      'correctCount': correctCount,
-      'wrongCount': wrongCount,
-      'score': score,
-    };
-  }
-
-  Map<String, dynamic> toJson() => toMap();
 
   factory QuizAttemptModel.fromEntity(QuizAttempt a) => QuizAttemptModel(
         id: a.id,
@@ -76,6 +48,33 @@ class QuizAttemptModel {
         wrongCount: a.wrongCount,
         score: a.score,
       );
+  final String id;
+  final String studentId;
+  final String sourceId;
+  final String sourceType;
+  final String startedAt;
+  final String? completedAt;
+  final Map<String, int> answers;
+  final int correctCount;
+  final int wrongCount;
+  final int score;
+
+  Map<String, dynamic> toMap() {
+    return {
+      "id": id,
+      "studentId": studentId,
+      "sourceId": sourceId,
+      "sourceType": sourceType,
+      "startedAt": startedAt,
+      "completedAt": completedAt,
+      "answers": answers,
+      "correctCount": correctCount,
+      "wrongCount": wrongCount,
+      "score": score,
+    };
+  }
+
+  Map<String, dynamic> toJson() => toMap();
 
   QuizAttempt toEntity() => QuizAttempt(
         id: id,
@@ -121,7 +120,10 @@ class QuizAttemptModel {
 
   @override
   String toString() {
-    return 'QuizAttemptModel(id: $id, studentId: $studentId, sourceId: $sourceId, sourceType: $sourceType, startedAt: $startedAt, completedAt: $completedAt, answers: $answers, correctCount: $correctCount, wrongCount: $wrongCount, score: $score)';
+    return "QuizAttemptModel(id: $id, studentId: $studentId, sourceId: "
+        "$sourceId, sourceType: $sourceType, startedAt: $startedAt, "
+        "completedAt: $completedAt, answers: $answers, correctCount: "
+        "$correctCount, wrongCount: $wrongCount, score: $score)";
   }
 
   @override

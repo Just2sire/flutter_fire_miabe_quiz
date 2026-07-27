@@ -2,12 +2,6 @@ import "../../domain/entities/difficulty_level.dart";
 import "../../domain/entities/enums.dart";
 
 class DifficultyLevelModel {
-  final String id;
-  final String name;
-  final int timePerQuestionSeconds;
-  final int pointsPerCorrect;
-  final String description;
-
   const DifficultyLevelModel({
     required this.id,
     required this.name,
@@ -18,29 +12,17 @@ class DifficultyLevelModel {
 
   factory DifficultyLevelModel.fromMap(Map<String, dynamic> map) {
     return DifficultyLevelModel(
-      id: map['id'] as String? ?? '',
-      name: map['name'] as String? ?? '',
+      id: map["id"] as String? ?? "",
+      name: map["name"] as String? ?? "",
       timePerQuestionSeconds:
-          (map['timePerQuestionSeconds'] as num?)?.toInt() ?? 0,
-      pointsPerCorrect: (map['pointsPerCorrect'] as num?)?.toInt() ?? 0,
-      description: map['description'] as String? ?? '',
+          (map["timePerQuestionSeconds"] as num?)?.toInt() ?? 0,
+      pointsPerCorrect: (map["pointsPerCorrect"] as num?)?.toInt() ?? 0,
+      description: map["description"] as String? ?? "",
     );
   }
 
   factory DifficultyLevelModel.fromJson(Map<String, dynamic> json) =>
       DifficultyLevelModel.fromMap(json);
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'timePerQuestionSeconds': timePerQuestionSeconds,
-      'pointsPerCorrect': pointsPerCorrect,
-      'description': description,
-    };
-  }
-
-  Map<String, dynamic> toJson() => toMap();
 
   factory DifficultyLevelModel.fromEntity(DifficultyLevel level) =>
       DifficultyLevelModel(
@@ -50,19 +32,36 @@ class DifficultyLevelModel {
         pointsPerCorrect: level.pointsPerCorrect,
         description: level.description,
       );
+  final String id;
+  final String name;
+  final int timePerQuestionSeconds;
+  final int pointsPerCorrect;
+  final String description;
+
+  Map<String, dynamic> toMap() {
+    return {
+      "id": id,
+      "name": name,
+      "timePerQuestionSeconds": timePerQuestionSeconds,
+      "pointsPerCorrect": pointsPerCorrect,
+      "description": description,
+    };
+  }
+
+  Map<String, dynamic> toJson() => toMap();
 
   Difficulty get _difficultyEnum => Difficulty.values.firstWhere(
-        (d) => d.name == id,
-        orElse: () => Difficulty.easy,
-      );
+    (d) => d.name == id,
+    orElse: () => Difficulty.easy,
+  );
 
   DifficultyLevel toEntity() => DifficultyLevel(
-        id: _difficultyEnum,
-        name: name,
-        timePerQuestionSeconds: timePerQuestionSeconds,
-        pointsPerCorrect: pointsPerCorrect,
-        description: description,
-      );
+    id: _difficultyEnum,
+    name: name,
+    timePerQuestionSeconds: timePerQuestionSeconds,
+    pointsPerCorrect: pointsPerCorrect,
+    description: description,
+  );
 
   DifficultyLevelModel copyWith({
     String? id,
@@ -83,7 +82,9 @@ class DifficultyLevelModel {
 
   @override
   String toString() {
-    return 'DifficultyLevelModel(id: $id, name: $name, timePerQuestionSeconds: $timePerQuestionSeconds, pointsPerCorrect: $pointsPerCorrect, description: $description)';
+    return "DifficultyLevelModel(id: $id, name: $name, timePerQuestionSeconds: "
+        "$timePerQuestionSeconds, pointsPerCorrect: $pointsPerCorrect," 
+        " description: $description)";
   }
 
   @override

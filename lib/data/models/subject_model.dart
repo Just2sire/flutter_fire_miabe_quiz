@@ -4,14 +4,6 @@ import "../../domain/entities/subject.dart";
 /// on convertit toujours via [toEntity] avant de remonter dans les
 /// use cases / providers.
 class SubjectModel {
-  final String id;
-  final String name;
-  final String description;
-  final String iconName;
-  final String colorHex;
-  final int totalLessons;
-  final int totalQuizzes;
-  final double progress;
 
   const SubjectModel({
     required this.id,
@@ -26,34 +18,19 @@ class SubjectModel {
 
   factory SubjectModel.fromMap(Map<String, dynamic> map) {
     return SubjectModel(
-      id: map['id'] as String? ?? '',
-      name: map['name'] as String? ?? '',
-      description: map['description'] as String? ?? '',
-      iconName: map['iconName'] as String? ?? '',
-      colorHex: map['colorHex'] as String? ?? '',
-      totalLessons: (map['totalLessons'] as num?)?.toInt() ?? 0,
-      totalQuizzes: (map['totalQuizzes'] as num?)?.toInt() ?? 0,
-      progress: (map['progress'] as num?)?.toDouble() ?? 0.0,
+      id: map["id"] as String? ?? "",
+      name: map["name"] as String? ?? "",
+      description: map["description"] as String? ?? "",
+      iconName: map["iconName"] as String? ?? "",
+      colorHex: map["colorHex"] as String? ?? "",
+      totalLessons: (map["totalLessons"] as num?)?.toInt() ?? 0,
+      totalQuizzes: (map["totalQuizzes"] as num?)?.toInt() ?? 0,
+      progress: (map["progress"] as num?)?.toDouble() ?? 0.0,
     );
   }
 
   factory SubjectModel.fromJson(Map<String, dynamic> json) =>
       SubjectModel.fromMap(json);
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'description': description,
-      'iconName': iconName,
-      'colorHex': colorHex,
-      'totalLessons': totalLessons,
-      'totalQuizzes': totalQuizzes,
-      'progress': progress,
-    };
-  }
-
-  Map<String, dynamic> toJson() => toMap();
 
   factory SubjectModel.fromEntity(Subject subject) => SubjectModel(
         id: subject.id,
@@ -65,6 +42,29 @@ class SubjectModel {
         totalQuizzes: subject.totalQuizzes,
         progress: subject.progress,
       );
+  final String id;
+  final String name;
+  final String description;
+  final String iconName;
+  final String colorHex;
+  final int totalLessons;
+  final int totalQuizzes;
+  final double progress;
+
+  Map<String, dynamic> toMap() {
+    return {
+      "id": id,
+      "name": name,
+      "description": description,
+      "iconName": iconName,
+      "colorHex": colorHex,
+      "totalLessons": totalLessons,
+      "totalQuizzes": totalQuizzes,
+      "progress": progress,
+    };
+  }
+
+  Map<String, dynamic> toJson() => toMap();
 
   Subject toEntity() => Subject(
         id: id,
@@ -101,7 +101,9 @@ class SubjectModel {
 
   @override
   String toString() {
-    return 'SubjectModel(id: $id, name: $name, description: $description, iconName: $iconName, colorHex: $colorHex, totalLessons: $totalLessons, totalQuizzes: $totalQuizzes, progress: $progress)';
+    return "SubjectModel(id: $id, name: $name, description: $description,"
+    " iconName: $iconName, colorHex: $colorHex, totalLessons: $totalLessons, "
+    "totalQuizzes: $totalQuizzes, progress: $progress)";
   }
 
   @override

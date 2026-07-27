@@ -1,4 +1,5 @@
 import "dart:convert";
+import "dart:ui" show Color;
 
 extension StringExtensions on String {
   // Validation
@@ -133,6 +134,14 @@ extension StringExtensions on String {
 
   String fromBase64() {
     return utf8.decode(base64.decode(this));
+  }
+
+  Color toColor() {
+    var cleanHex = replaceAll("#", "").replaceAll("0x", "");
+    if (cleanHex.length == 6) {
+      cleanHex = "FF$cleanHex";
+    }
+    return Color(int.parse(cleanHex, radix: 16));
   }
 }
 

@@ -9,10 +9,9 @@ import "../models/quiz_attempt_model.dart";
 import "../models/student_model.dart";
 
 class StudentRepositoryImpl implements StudentRepository {
-  final LocalJsonDataSource _dataSource;
-
   StudentRepositoryImpl({LocalJsonDataSource? dataSource})
-      : _dataSource = dataSource ?? LocalJsonDataSource.instance;
+    : _dataSource = dataSource ?? LocalJsonDataSource.instance;
+  final LocalJsonDataSource _dataSource;
 
   static const _studentKey = "current_student";
   static const _historyKey = "quiz_attempt_history";
@@ -22,8 +21,9 @@ class StudentRepositoryImpl implements StudentRepository {
     final prefs = await SharedPreferences.getInstance();
     final raw = prefs.getString(_studentKey);
     if (raw != null) {
-      return StudentModel.fromJson(jsonDecode(raw) as Map<String, dynamic>)
-          .toEntity();
+      return StudentModel.fromJson(
+        jsonDecode(raw) as Map<String, dynamic>,
+      ).toEntity();
     }
     // Premier lancement : on part du profil de démo packagé en asset.
     final seed = await _dataSource.loadObject("students.json");
@@ -44,9 +44,11 @@ class StudentRepositoryImpl implements StudentRepository {
     final prefs = await SharedPreferences.getInstance();
     final raw = prefs.getStringList(_historyKey) ?? [];
     return raw
-        .map((e) =>
-            QuizAttemptModel.fromJson(jsonDecode(e) as Map<String, dynamic>)
-                .toEntity())
+        .map(
+          (e) => QuizAttemptModel.fromJson(
+            jsonDecode(e) as Map<String, dynamic>,
+          ).toEntity(),
+        )
         .where((a) => a.studentId == studentId)
         .toList()
       ..sort((a, b) => b.startedAt.compareTo(a.startedAt));
@@ -55,8 +57,8 @@ class StudentRepositoryImpl implements StudentRepository {
   @override
   Future<void> saveAttempt(QuizAttempt attempt) async {
     final prefs = await SharedPreferences.getInstance();
-    final raw = prefs.getStringList(_historyKey) ?? [];
-    raw.add(jsonEncode(QuizAttemptModel.fromEntity(attempt).toJson()));
+    final raw = prefs.getStringList(_historyKey) ?? []
+      ..add(jsonEncode(QuizAttemptModel.fromEntity(attempt).toJson()));
     await prefs.setStringList(_historyKey, raw);
 
     // Met à jour les compteurs cache du profil.
