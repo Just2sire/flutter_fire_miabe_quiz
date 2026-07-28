@@ -1,7 +1,10 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
 import "package:miabe_quiz/core/routing/app_routes.dart";
+import "package:miabe_quiz/presentation/pages/box_page.dart";
 import "package:miabe_quiz/presentation/pages/index.dart";
+import "package:miabe_quiz/presentation/pages/profile_page.dart";
+import "package:miabe_quiz/presentation/pages/quiz_page.dart";
 import "package:miabe_quiz/presentation/pages/subject_detail_page.dart";
 
 final appRouter = GoRouter(
@@ -23,7 +26,7 @@ final appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.home,
               builder: (context, state) {
-                final username = state.uri.queryParameters["name"] ?? "Unknow";
+                final username = state.uri.queryParameters["name"] ?? "Abalo";
                 return HomePage(username: username);
               },
             ),
@@ -51,7 +54,16 @@ final appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.quizzes,
               builder: (context, state) =>
-                  const Scaffold(body: Center(child: Text("Quiz"))),
+                  const QuizPage(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: AppRoutes.boxes,
+              builder: (context, state) =>
+                  const BoxPage(),
             ),
           ],
         ),
@@ -60,22 +72,10 @@ final appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.profile,
               builder: (context, state) =>
-                  const Scaffold(body: Center(child: Text("Profil"))),
+              const ProfilePage(),
             ),
           ],
         ),
-        // StatefulShellBranch(
-        //   routes: [
-        //     GoRoute(
-        //       path: AppRoutes.profile,
-        //       pageBuilder: (context, state) => AppTransitions.fadeSlide(
-        //         context: context,
-        //         state: state,
-        //         child: const Scaffold(body: Center(child: Text("Profile"))),
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ],
     ),
   ],

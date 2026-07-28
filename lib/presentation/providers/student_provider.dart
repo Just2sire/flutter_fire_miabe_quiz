@@ -8,7 +8,17 @@ class StudentProvider extends ChangeNotifier {
   final StudentRepository _repository;
 
   Student? _student;
-  Student? get student => _student;
+  Student get student =>
+      _student ??
+      const Student(
+        id: "john_doe",
+        fullName: "John Doe",
+        email: "john@gmail.com",
+        phone: "+228 98562147",
+        school: "Lycée Agoè Est",
+        gradeLevel: "Niveau 10",
+        avatarAsset: "",
+      );
 
   List<QuizAttempt> _history = [];
   List<QuizAttempt> get history => _history;

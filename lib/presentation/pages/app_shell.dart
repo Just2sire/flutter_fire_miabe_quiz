@@ -33,6 +33,12 @@ class _AppShellState extends State<AppShell> {
     ),
     (
       index: 3,
+      icon: LucideIcons.package,
+      label: "Box",
+      route: AppRoutes.quizzes,
+    ),
+    (
+      index: 4,
       icon: LucideIcons.circleUserRound,
       label: "Profile",
       route: AppRoutes.profile,
@@ -51,6 +57,8 @@ class _AppShellState extends State<AppShell> {
   Widget build(BuildContext context) {
     final navigationShell = widget.navigationShell;
     final currentIndex = navigationShell.currentIndex;
+    final itemsLength = _navItems.length;
+    final theme = Theme.of(context);
     return AppScaffold(
       padding: EdgeInsets.zero,
       body: ResponsiveLayout(
@@ -80,6 +88,46 @@ class _AppShellState extends State<AppShell> {
           );
         },
       ),
+      floatingActionButton: itemsLength == 5 && context.isMobile
+          ? FloatingActionButton(
+              onPressed: () => _onTap(2),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              child: Container(
+                width: 56,
+                height: 56,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: theme.colorScheme.primaryContainer,
+                  boxShadow: [
+                    BoxShadow(
+                      color: theme.colorScheme.primaryContainer.withValues(
+                        alpha: 0.4,
+                      ),
+                      blurRadius: AppSpacing.sm,
+                      spreadRadius: 2,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: AppIconSwitcher(
+                  child: Icon(
+                    _navItems[2].icon,
+                    color: theme.colorScheme.onPrimaryContainer,
+                    size: widget.navigationShell.currentIndex == 2
+                        ? AppSpacing.iconMxl
+                        : AppSpacing.iconLg,
+                    key: ValueKey(
+                      "app_shell_${widget.navigationShell.currentIndex == 2}",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : null,
+      floatingActionButtonLocation: context.isMobile
+          ? .centerDocked
+          : null,
       bottomNavigationBar: context.isMobile
           ? AppBottomBar(
               items: _navItems,

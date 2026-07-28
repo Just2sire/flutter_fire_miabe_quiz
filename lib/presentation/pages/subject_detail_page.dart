@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import "package:lucide_icons_flutter/lucide_icons.dart";
-import "package:miabe_quiz/core/theme/app_colors.dart";
 import "package:miabe_quiz/core/theme/app_spacing.dart";
 import "package:miabe_quiz/domain/entities/index.dart";
 import "package:miabe_quiz/presentation/providers/subjects_provider.dart";

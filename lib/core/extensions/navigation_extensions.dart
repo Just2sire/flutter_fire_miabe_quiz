@@ -20,7 +20,7 @@ extension NavigationExtensions on BuildContext {
   void goToSubjectDetail(String id) => go("${AppRoutes.subjects}/$id");
 
   // /// Navigation vers le profil
-  // void goToProfile() => go(AppRoutes.profile);
+  void goToProfile() => go(AppRoutes.profile);
   // void pushProfile() => push(AppRoutes.profile);
 
   // /// Navigation vers les paramètres

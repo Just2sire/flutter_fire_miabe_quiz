@@ -80,7 +80,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 textAlign: .center,
                 keyboardType: .name,
                 textCapitalization: .words,
-                hintText: "Votre nom *",
+                hintText: "Votre nom",
                 hintStyle: textTheme.titleMedium?.copyWith(
                   color: colorScheme.onSurface.withValues(alpha: 0.5),
                 ),

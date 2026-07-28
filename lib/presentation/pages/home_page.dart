@@ -28,17 +28,35 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<_CardData> cardData = [
-    (icon: LucideIcons.notebookPen, label: "Quiz complétés", value: 05),
-    (icon: LucideIcons.star, label: "Points total", value: 112),
-  ];
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<StudentProvider>().updateProfile(fullName: widget.username);
+      context.read<SubjectsProvider>().loadSubjects();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final username = widget.username;
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final textTheme = theme.textTheme;
     final subjectProvider = context.read<SubjectsProvider>();
+    final student = context.read<StudentProvider>().student;
+    final cardData = <_CardData>[
+      (
+        icon: LucideIcons.notebookPen,
+        label: "Quiz complétés",
+        value: student.completedQuizzesCount,
+      ),
+      (
+        icon: LucideIcons.star,
+        label: "Points total",
+        value: student.totalPoints,
+      ),
+    ];
 
     return AppScaffold(
       scrollable: true,
@@ -48,8 +66,9 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           AppTopbar(
-            title: username,
-            subtitle: "Niveau 10",
+            // title: student.fullName.split(" ")[-1],
+            title: student.fullName,
+            subtitle: student.gradeLevel,
             showLeading: false,
             titleSubtitleSpacing: 0,
             actions: [

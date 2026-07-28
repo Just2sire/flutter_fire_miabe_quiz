@@ -1,11 +1,9 @@
 import "package:flutter/material.dart";
 import "package:lucide_icons_flutter/lucide_icons.dart";
 import "package:miabe_quiz/core/extensions/build_context_extensions.dart";
-import "package:miabe_quiz/core/theme/app_colors.dart";
 import "package:miabe_quiz/core/theme/app_spacing.dart";
 import "package:miabe_quiz/domain/entities/quiz.dart";
 import "package:miabe_quiz/presentation/widgets/app_icon_container.dart";
-import "package:miabe_quiz/presentation/widgets/app_progress_indicator.dart";
 
 class SubjectQuizzesTab extends StatelessWidget {
   const SubjectQuizzesTab({required this.quizzes, super.key});

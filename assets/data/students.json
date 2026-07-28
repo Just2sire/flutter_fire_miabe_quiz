@@ -1,10 +1,10 @@
 {
   "id": "student-001",
-  "fullName": "Ahmed Mohamed",
-  "email": "ahmed.mohamed@example.com",
+  "fullName": "KOSSI Desiré",
+  "email": "kossidesirekomla@gmail.com",
   "phone": "+228 90 00 00 00",
-  "school": "Lycée Moderne de Lomé",
-  "gradeLevel": "10th Grade",
+  "school": "Lycée Agoè Est de Lomé",
+  "gradeLevel": "Niveau 10",
   "avatarAsset": "assets/images/avatars/student_001.png",
   "totalPoints": 1023,
   "completedQuizzesCount": 45

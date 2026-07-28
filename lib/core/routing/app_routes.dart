@@ -5,6 +5,7 @@ class AppRoutes {
   // APP SHELL
   static String home = "/home";
   static String subjects = "/subjects";
+  static String boxes = "/boxes";
   static String quizzes = "/quizzes";
   static String profile = "/profile";
 

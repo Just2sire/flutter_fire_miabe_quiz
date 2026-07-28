@@ -39,7 +39,9 @@ class SubjectLessonCard extends StatelessWidget {
           backgroundColor: lesson.isCompleted
               ? AppColors.success.withValues(alpha: 0.15)
               : context.colorScheme.primary.withValues(alpha: 0.15),
-          color: lesson.isCompleted ? AppColors.success : context.colorScheme.primary,
+          color: lesson.isCompleted
+              ? AppColors.success
+              : context.colorScheme.primary,
           icon: lesson.isCompleted
               ? LucideIcons.checkCircle2
               : LucideIcons.bookOpen,

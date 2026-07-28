@@ -118,7 +118,7 @@ class AppElevatedButton extends StatelessWidget {
       backgroundColor: enabled
           ? isLoading
                 ? Colors.grey
-                : backgroundColor ?? theme.primaryColor
+                : backgroundColor ?? theme.colorScheme.primaryContainer
           : Colors.grey,
       fixedSize:
           buttonSize ??
