@@ -11,6 +11,7 @@ abstract class SubjectRepository {
   Future<List<Unit>> getUnitsBySubject(String subjectId);
   Future<List<Lesson>> getLessonsByUnit(String unitId);
   Future<List<Lesson>> getLessonsBySubject(String subjectId);
+  Future<Lesson?> getLessonById(String lessonId);
 
   /// Marque une leçon comme terminée (persistance locale).
   Future<void> markLessonCompleted(String lessonId);

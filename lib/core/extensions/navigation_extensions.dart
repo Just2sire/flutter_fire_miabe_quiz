@@ -13,6 +13,12 @@ extension NavigationExtensions on BuildContext {
   /// Navigation vers la page d'accueil
   void goToHome(String name) => go("${AppRoutes.home}?name=$name");
 
+  /// Navigation vers la page de matières
+  void goToSubject() => go(AppRoutes.subjects);
+
+  /// Navigation vers la page de matières
+  void goToSubjectDetail(String id) => go("${AppRoutes.subjects}/$id");
+
   // /// Navigation vers le profil
   // void goToProfile() => go(AppRoutes.profile);
   // void pushProfile() => push(AppRoutes.profile);

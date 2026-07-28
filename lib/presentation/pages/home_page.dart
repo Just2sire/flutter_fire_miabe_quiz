@@ -7,10 +7,16 @@ import "package:miabe_quiz/core/theme/app_colors.dart";
 import "package:miabe_quiz/core/theme/app_spacing.dart";
 import "package:miabe_quiz/domain/entities/lesson.dart";
 import "package:miabe_quiz/domain/entities/subject.dart" show Subject;
-import "package:miabe_quiz/presentation/providers/index.dart";
 import "package:miabe_quiz/presentation/widgets/index.dart"
-    show AppScaffold, AppTextFormField, AppTopbar, AppProgressIndicator;
+    show
+        AppScaffold,
+        AppTextFormField,
+        AppTopbar,
+        AppProgressIndicator,
+        AppIconContainer;
 import "package:provider/provider.dart";
+
+import "../providers/index.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({required this.username, super.key});
@@ -111,7 +117,7 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: .spaceBetween,
             children: [
-              Text("Quiz", style: textTheme.headlineMedium),
+              Text("Matières", style: textTheme.headlineMedium),
               TextButton(onPressed: () {}, child: const Text("Voir tout")),
             ],
           ),
@@ -253,7 +259,7 @@ class HomeCard extends StatelessWidget {
                           spacing: AppSpacing.sm,
                           crossAxisAlignment: .start,
                           children: [
-                            IconContainer(icon: icon),
+                            AppIconContainer(icon: icon),
                             Text(label, style: textTheme.bodyLarge),
                           ],
                         ),
@@ -356,7 +362,7 @@ class SubjectCard extends StatelessWidget {
             Row(
               spacing: AppSpacing.md,
               children: [
-                IconContainer(
+                AppIconContainer(
                   backgroundColor: AppColors.white.withValues(alpha: 0.2),
                   color: AppColors.white,
                   iconSize: AppSpacing.iconXl,
@@ -412,37 +418,6 @@ class SubjectCard extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class IconContainer extends StatelessWidget {
-  const IconContainer({
-    required this.icon,
-    this.iconSize,
-    this.backgroundColor,
-    this.color,
-    this.padding = AppSpacing.insetMd,
-    super.key,
-  });
-
-  final IconData icon;
-  final double? iconSize;
-  final EdgeInsets padding;
-  final Color? backgroundColor;
-  final Color? color;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
-    return Container(
-      padding: padding,
-      decoration: BoxDecoration(
-        shape: .circle,
-        color: backgroundColor ?? theme.scaffoldBackgroundColor,
-      ),
-      child: Icon(icon, color: color ?? colorScheme.secondary, size: iconSize),
     );
   }
 }

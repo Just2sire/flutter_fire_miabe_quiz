@@ -35,6 +35,12 @@ class QuizRepositoryImpl implements QuizRepository {
   }
 
   @override
+  Future<List<Quiz>> getQuizzesByUnit(String unitId) async {
+    final all = await getAllQuizzes();
+    return all.where((q) => q.unitId == unitId).toList();
+  }
+
+  @override
   Future<Quiz?> getQuizById(String id) async {
     final all = await getAllQuizzes();
     try {

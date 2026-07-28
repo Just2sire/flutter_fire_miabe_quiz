@@ -1,13 +1,16 @@
 import "package:flutter/material.dart";
-import "package:miabe_quiz/domain/entities/index.dart" show Subject, Lesson, Unit;
-import "package:miabe_quiz/domain/repositories/index.dart" show SubjectRepository;
+import "package:miabe_quiz/domain/entities/index.dart"
+    show Subject, Lesson, Unit, Quiz;
+import "package:miabe_quiz/domain/repositories/index.dart"
+    show SubjectRepository, QuizRepository;
 
 enum LoadStatus { idle, loading, loaded, error }
 
 class SubjectsProvider extends ChangeNotifier {
+  SubjectsProvider(this._repository, this._quizRepository);
 
-  SubjectsProvider(this._repository);
   final SubjectRepository _repository;
+  final QuizRepository _quizRepository;
 
   LoadStatus _status = LoadStatus.idle;
   LoadStatus get status => _status;
@@ -41,6 +44,14 @@ class SubjectsProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<Subject?> getSubjectById(String id) async {
+    try {
+      return _subjects.firstWhere((s) => s.id == id);
+    } catch (_) {
+      return _repository.getSubjectById(id);
+    }
+  }
+
   Future<List<Unit>> unitsFor(String subjectId) =>
       _repository.getUnitsBySubject(subjectId);
 
@@ -49,6 +60,18 @@ class SubjectsProvider extends ChangeNotifier {
 
   Future<List<Lesson>> lessonsForSubject(String subjectId) =>
       _repository.getLessonsBySubject(subjectId);
+
+  Future<Lesson?> getLessonById(String lessonId) =>
+      _repository.getLessonById(lessonId);
+
+  Future<List<Quiz>> quizzesForSubject(String subjectId) =>
+      _quizRepository.getQuizzesBySubject(subjectId);
+
+  Future<List<Quiz>> quizzesForUnit(String unitId) =>
+      _quizRepository.getQuizzesByUnit(unitId);
+
+  Future<Quiz?> getQuizById(String quizId) =>
+      _quizRepository.getQuizById(quizId);
 
   Future<void> markLessonCompleted(String lessonId) =>
       _repository.markLessonCompleted(lessonId);

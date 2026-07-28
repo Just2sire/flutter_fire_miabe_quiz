@@ -73,6 +73,22 @@ class SubjectRepositoryImpl implements SubjectRepository {
   }
 
   @override
+  Future<Lesson?> getLessonById(String lessonId) async {
+    final completedIds = await _completedLessonIds();
+    final json = await _dataSource.loadList("lessons.json");
+    try {
+      final lesson = json
+          .map((e) => LessonModel.fromJson(e).toEntity())
+          .firstWhere((l) => l.id == lessonId);
+      return completedIds.contains(lesson.id)
+          ? lesson.copyWith(isCompleted: true)
+          : lesson;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
   Future<void> markLessonCompleted(String lessonId) async {
     final prefs = await SharedPreferences.getInstance();
     final ids = prefs.getStringList(_completedLessonsKey) ?? [];

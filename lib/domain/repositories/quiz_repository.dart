@@ -5,6 +5,7 @@ import "../entities/quiz.dart";
 abstract class QuizRepository {
   Future<List<Quiz>> getAllQuizzes();
   Future<List<Quiz>> getQuizzesBySubject(String subjectId);
+  Future<List<Quiz>> getQuizzesByUnit(String unitId);
   Future<Quiz?> getQuizById(String id);
   Future<void> updateQuizProgress(String quizId, double progress);
 }

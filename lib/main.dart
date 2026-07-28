@@ -20,8 +20,10 @@ void main() {
         // ── Providers applicatifs (ChangeNotifier) ──
         ChangeNotifierProvider(create: (_) => ThemeProvider()..load()),
         ChangeNotifierProvider(
-          create: (ctx) =>
-              SubjectsProvider(ctx.read<SubjectRepository>())..loadSubjects(),
+          create: (ctx) => SubjectsProvider(
+            ctx.read<SubjectRepository>(),
+            ctx.read<QuizRepository>(),
+          )..loadSubjects(),
         ),
         ChangeNotifierProvider(
           create: (ctx) =>
